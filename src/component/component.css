@@ -46,7 +46,7 @@
     width: 24px !important;
 }
 #list_a{
-    height: 30%;
+    height: 40%;
     text-align: center;
     position: relative;
     padding-top: 50%;
@@ -60,7 +60,7 @@
 
 
 #logo{
-    height: calc(100% - 30% - 15% - 50px);
+    height: calc(100% - 40% - 15% - 50px);
     width: 100%;
     margin: auto;
     position: relative;
@@ -86,7 +86,7 @@
 }
 #map{
     width: calc(100% -6%);
-    background-color: #fffef8;
+    background-color: #e7c507;
     height: 100%;
     margin: 0% 3%;
 }
@@ -99,7 +99,9 @@
     transition: 0.8s ease;
     z-index: 1;
     padding: 3%;
+    background-color: #fffef8;
 }
+
 #nav-tab{
     border-bottom: none !important;
 }
@@ -140,6 +142,12 @@
     list-style-type: none;
     padding: 20px;
 }
+.ul__union li{
+    display: flex;
+}
+.ul__union li p{
+    line-height: 20px;
+}
 .ul__union span{
     background-color: white;
     border-radius: 20px;
@@ -154,10 +162,142 @@
 .tab-pane {
     position: absolute;
 }
+
 #detail{
     width: 25%;
-    background-color: rgb(11, 56, 56);
+    background-color: #fffef8;
     margin-left: 15%;
     height: 100%;
     position: absolute;
+    transition: 0.8s ease;
+    max-height: 100vh;
+    overflow: auto;
+}
+#img_detail{
+    width: 100%;
+    height: 30%;
+}
+#img_detail img{
+    width: 100%;
+    height: 250px;
+    padding: 20px;
+}
+#close__detail{
+    background-color: rgb(71, 71, 71);
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    margin: 20px 0 0 20px;
+    cursor: pointer;
+}
+#close__detail svg{
+    color: #ffffff;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}
+#name__address{
+    margin: 10px 20px 10px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    width: calc(100% -20px);
+}
+#button__save{
+    margin: 0 20px;
+    display: flex;
+    margin-bottom: 20px;
+}
+#button__save>button{
+    margin-right: 30px;
+}
+#button__save > button:nth-child(2){
+    border: 1px solid;
+}
+#all__information{
+    margin: 0 20px;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: #bdbdbd00 !important;
+    color: #eac870 !important;
+}
+.nav-item button{
+    color: black;
+}
+.nav-item button:hover{
+    color: black;
+}
+#line_if{
+    width: 50px;
+    height: 4px;
+    background-color: #eac870;
+    margin-top: -20px;
+    margin-left: 35px;
+}
+#office{
+    display: flex;
+    padding: 10px 0;
+}
+#office img{
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 0 0;
+}
+#phone{
+    display: flex;
+    padding: 10px 0;
+}
+#phone img{
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 0 0;
+}
+#sms{
+    display: flex;
+    padding: 10px 0;
+}
+#sms img{
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 0 0;
+}
+#web{
+    display: flex;
+    padding: 10px 0;
+}
+#web img{
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 0 0;
+}
+#all_img{
+    width: 100%;
+}
+#all_img img{
+    width: 100px;
+    height: 100x;
+}
+
+#search{
+    width: 25%;
+    background-color: #fffef8;
+    margin-left: 15%;
+    height: 100%;
+    position: absolute;
+    transition: 0.8s ease;
+    max-height: 100vh;
+    overflow: auto;
+}
+#input_search{
+    margin: 20px 0;
+    width: 100%;
+}
+#input_search input{
+    margin: auto 5%;
+    width: 90%;
+    height: 50px;
+    border: 2px solid #eac870;
+}
+#list__address{
+    padding: 0 5%;
 }

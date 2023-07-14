@@ -43,7 +43,7 @@ const Tabname = () => {
                         <li>
                             <span>1</span>
                             <img src="../images/union.png" alt="" />
-                            <span>sdas</span>
+                            <p>sdas</p>
                         </li>
                     </ul>
                 </div>
@@ -52,7 +52,7 @@ const Tabname = () => {
                         <li>
                             <span>1</span>
                             <img src="../images/union.png" alt="" />
-                            <span>sdas</span>
+                            <p>sdas</p>
                         </li>
                     </ul>
                 </div>
@@ -61,7 +61,7 @@ const Tabname = () => {
                         <li>
                             <span>1</span>
                             <img src="../images/union.png" alt="" />
-                            <span>sdas</span>
+                            <p>sdas</p>
                         </li>
                     </ul>
                 </div>
@@ -70,7 +70,7 @@ const Tabname = () => {
                         <li>
                             <span>1</span>
                             <img src="../images/union.png" alt="" />
-                            <span>sdas</span>
+                            <p>sdas</p>
                         </li>
                     </ul>
                 </div>
@@ -79,7 +79,7 @@ const Tabname = () => {
                         <li>
                             <span>1</span>
                             <img src="../images/union.png" alt="" />
-                            <span>sdasdfd</span>
+                            <p>sdasdfd</p>
                         </li>
                     </ul>
                 </div>

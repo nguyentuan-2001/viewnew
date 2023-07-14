@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import Tabname from './tabname';
 import Detail from './detail';
+import Search from './search';
 
 const Navbar: React.FC = () => {
     const [isOpen, setOpen] = useState(false);
@@ -14,6 +15,8 @@ const Navbar: React.FC = () => {
     const [menu, setMenu] = useState('MENU');
     const [isTransformed, setIsTransformed] = useState(true); 
     const [opacityList, setopacityList] = useState('0');
+    const [isClose, setIsClose] = useState(true); 
+    const [isCloseSearch, setIsCloseSearch] = useState(false); 
 
     const handleClick = () => {
         if (isClicked) {
@@ -44,6 +47,13 @@ const Navbar: React.FC = () => {
         setActiveLink(link);
     };
 
+    const closeDetail = () => {
+        setIsClose(true);
+    };
+    const closeSearch = () => {
+        setIsCloseSearch(true);
+    };
+
     return(
         <div className="all__map">
             <div className="left__panel">
@@ -53,6 +63,12 @@ const Navbar: React.FC = () => {
                 </div>
 
                 <div id='list_a' style={{opacity: opacityList}}>
+                    <a style={{ color: activeLink === 'map' ? 'black' : '#bdbdbd' } }
+                        onClick={() => openList('map')}
+                        href='#'>
+                        BẢN ĐỒ
+                    </a>
+                    <br /><br />
                     <a style={{ color: activeLink === 'list' ? 'black' : '#bdbdbd' } }
                         onClick={() => openList('list')}
                         href='#'>
@@ -87,8 +103,21 @@ const Navbar: React.FC = () => {
             <div id='show__name' style={{transform: isTransformed ? 'translateX(-200%)' : 'none'}}>
                 <Tabname/>
             </div>
-            <div id='detail'>
+            <div id='detail' style={{transform: isClose ? 'translateX(-200%)' : 'none'}}>
+                <div id='close__detail' onClick={closeDetail} >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                    </svg>
+                </div>
                 <Detail/>
+            </div>
+            <div id='search' style={{transform: isCloseSearch ? 'translateX(-200%)' : 'none'}}>
+                <div id='close__detail' onClick={closeSearch} >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                    </svg>
+                </div>
+                <Search/>
             </div>
         </div>
     )
