@@ -1,16 +1,16 @@
-import React, { useEffect } from 'react';
-import Navbar from './component/component';
+import React, { useContext, useEffect, useState } from 'react';
+import 'maplibre-gl/dist/maplibre-gl.css';
+import { MapContext, MapProvider } from './contexts/tabnamecontext';
+import MapComponent from './layout/mapcomponent';
+// import { danhmuc } from './map/showinformation';
+import './i18n/i18n'
 
 const App: React.FC = () => {
-  useEffect(() => {
-    
-
-
-    }, []);
-
   return (
     <div className="map-wrap" >
-      <Navbar/>
+      <MapProvider>
+        <MapComponent/>
+      </MapProvider>
     </div>
   );
 };

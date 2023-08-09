@@ -1,0 +1,24 @@
+{
+    "header": {
+        "map": "BẢN ĐỒ",
+        "area": "KHU VỰC",
+        "search": "TÌM KIẾM",
+        "direction": "CHỈ ĐƯỜNG"
+    },
+    "tabname":{
+        "faculty": "Khoa - Viện đào tạo",
+        "institute": "Viện - Trung tâm nghiên cứu",
+        "room": "Phòng - Ban -  Trung tâm",
+        "library":"Thư viện - Phòng học",
+        "shops":"Cửa hàng - Quán xá"
+    },
+    "search":{
+        "placeholder":"Tìm kiếm tên khu vực",
+        "recent": "Tìm kiếm gần đây",
+        "suggest": "Gợi ý"
+    },
+    "direction": {
+        "placeholder start": "Chọn điểm bắt đầu" ,
+        "placeholder end": "Chọn điểm cần đến"
+    }
+}

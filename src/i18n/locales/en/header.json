@@ -1,0 +1,24 @@
+{
+    "header": {
+        "map": "MAP",
+        "area": "AREA",
+        "search": "SEARCH",
+        "direction": "DIRECTION"
+    },
+    "tabname":{
+        "faculty": "Faculty - Training Institute",
+        "institute": "Institute - Research Center",
+        "room": "Room - Department - Center",
+        "library":"Library - Classroom",
+        "shops":"Shops - Restaurants"
+    },
+    "search":{
+        "placeholder":"Search area name",
+        "recent": "Recent Search",
+        "suggest": "Suggest"
+    },
+    "direction": {
+        "placeholder start": "Choose start point" ,
+        "placeholder end": "Choose end point"
+    }
+}
