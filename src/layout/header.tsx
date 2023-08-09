@@ -87,11 +87,11 @@ const Header = () => {
 
   return (
     <div style={{ height:'100%'}}>
-        <div className="header_all">
-            <div id="icon__open" onClick={openLeft} style={{display: isOpenHeader ? 'none' : 'block'}}>
-                <FontAwesomeIcon icon="bars" />
-            </div>
-            <div className="left__panel" style={{transform: isOpenHeader ? 'none' : 'translateX(-200%)'}}>
+        <div id="icon__open" onClick={openLeft} style={{display: isOpenHeader ? 'none' : 'block'}}>
+            <FontAwesomeIcon icon="bars" />
+        </div>
+        <div className="header_all" style={{transform: isOpenHeader ? 'none' : 'translateX(-200%)'}}>
+            <div className="left__panel" >
                 <div id="icon__close__header" onClick={closeLeft}>
                     <FontAwesomeIcon icon="arrow-left" />
                 </div>

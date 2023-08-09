@@ -117,7 +117,7 @@ const FindWay = () => {
                     if (pathLayer) {
                         map.removeLayer('3d-model15');
                     }
-                    const time = travelTimeInMinutes*60*1000/2;
+                    const time = travelTimeInMinutes*60*1000/10;
                     const customLayer2= object3dcar1(map,coordinates, startPoint,time );
                     map.addLayer(customLayer2);
     

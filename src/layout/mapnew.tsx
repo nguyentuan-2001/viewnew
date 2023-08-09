@@ -177,7 +177,12 @@ const MapNew: React.FC<PropsMap> = ({
     });
 
    
-    
+    map.on('click', (e) => {
+      setIsMap(true);
+      setIsNavigation(true);
+      setIsSearch(true);
+      setIsList(true)
+    })
 
 
     return () => map.remove();
