@@ -70,28 +70,14 @@ const MapNew: React.FC<PropsMap> = ({
 
     map.on("load", () => {
       
-      if(isSwitchOn === true){
+      if(isSwitchOn === false){
         setCurrentStyle(maptiler)
       }else{
         setCurrentStyle(green)
       }
-
-      // searchAddress(map);
-      // const searchInput = document.getElementById("search__address") as HTMLInputElement;
-      // if (searchInput) {
-      //   searchInput.addEventListener("input", () => {
-      //     const searchText = searchInput.value;
-      //     const suggestions = data.features.filter(function (feature) {
-      //       return feature.properties.name
-      //         .toLowerCase()
-      //         .includes(searchText.toLowerCase());
-      //     });
-      //     updateSuggestions(suggestions, map);
-      //   });
-      // }
     });
 
-    var nav = new maplibregl.NavigationControl({
+    const nav = new maplibregl.NavigationControl({
       showCompass: false, // hide the compass button
       showZoom: true, // show the zoom buttons
     });

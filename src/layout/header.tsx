@@ -118,11 +118,11 @@ const Header = () => {
                     <img src="./images/logo.png" alt="" />
                 </div>
                 <div id="input_onoff">
+                    <p>{isEnglish ? 'Overview': 'Toàn cảnh'}</p>
                     <label className="switch">
                         <input type="checkbox" checked={isSwitchOn} onChange={handleStyleChange} />
                         <span className="slider"></span>
                     </label>
-                    <p>{isEnglish ? 'Overview': 'Toàn cảnh'}</p>
                 </div>
                 <div className="language">
                     <div className="en" style={{borderColor: isEnglish ? '#D8AF5F' : '#9F9F9F', color: isEnglish ? '#D8AF5F' : '#9F9F9F'}}>

@@ -7,7 +7,6 @@ import { object3d, object3dcar, object3dcube} from './object3d';
 
 const roads = require('../hust/bd.geojson');
 const border = require('../hust/border1.json');
-const building = require('../hust/railways.geojson');
 const imgbd =  require('../image/map6.png');
 
 

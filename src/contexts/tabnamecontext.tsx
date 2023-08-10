@@ -55,7 +55,7 @@ const MapProvider: React.FC<PropsAuthContext> = ({ children }) => {
     const [isBlockNavigation, setIsBlockNavigation] = useState(false);
     const [startValue, setStartValue] = useState('');
     const [endValue, setEndValue] = useState('');
-    const [isSwitchOn, setIsSwitchOn] = useState(true);
+    const [isSwitchOn, setIsSwitchOn] = useState(false);
     const [isOpenHeader, setIsOpenHeader] = useState(true);
 
     const [isCoordinate, setIsCoordinate] = useState<any>();

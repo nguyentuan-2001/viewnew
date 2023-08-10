@@ -718,13 +718,13 @@
 }
 
 #input_onoff {
-  display: grid;
-  place-items: center;
+  display: flex;
   margin-top: 20px;
+  justify-content: center;
 }
 #input_onoff p{
-  margin-top: 10px;
   color: #000000;
+  margin-right: 10px;
 }
 
 #input_onoff input[type="checkbox"] {
