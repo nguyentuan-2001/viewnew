@@ -159,7 +159,7 @@
 }
 
 #nav-tabContent {
-  height: calc(100% - 40px - 25%);
+  height: calc(100% - 80px - 25%);
   overflow: auto;
   padding-top: 10px;
 }
@@ -212,7 +212,7 @@
 #ul__union li {
   padding-bottom: 5px;
   cursor: pointer;
-  max-height: 15%;
+  min-height: 80px;
 }
 
 #ul__union li p {
@@ -956,17 +956,20 @@ input:checked+.slider:before {
     height: calc(100% - 50px);
     margin-top: 50px;
   }
-
+  #nav-tab{
+    height: 25%;
+  }
   #nav-tab button {
-    font-size: 15px;
     width: 160px;
     height: 100%;
     padding: 20px 10px;
+    font-size: 15px;
   }
 
   #ul__union {
     overflow: auto;
     padding: 0px 20px;
+    max-height: 80%;
   }
 #ul__union img{
   transform: scale(0.7);
@@ -975,6 +978,9 @@ input:checked+.slider:before {
   font-size: 10px;
   margin-left: 0px !important;
   margin-bottom: 0;
+}
+#ul__union li{
+  min-height: 50px;
 }
   #search {
     width: 100%;
@@ -1071,11 +1077,10 @@ input:checked+.slider:before {
   }
 
   #nav-tab {
-    height: 20%;
+    height: 25%;
   }
 
   #nav-tab button {
-    font-size: 17px;
     width: 160px;
     height: 100%;
     padding: 20px 10px;
@@ -1181,11 +1186,10 @@ input:checked+.slider:before {
   }
 
   #nav-tab {
-    height: 17%;
+    height: 25%;
   }
 
   #nav-tab button {
-    font-size: 20px;
     width: 180px;
     height: 100%;
     padding: 20px 10px;
@@ -1284,11 +1288,10 @@ input:checked+.slider:before {
   }
 
   #nav-tab {
-    height: 22%;
+    height: 25%;
   }
 
   #nav-tab button {
-    font-size: 23px;
     width: 180px;
     height: 100%;
     padding: 20px 10px;
@@ -1367,11 +1370,10 @@ input:checked+.slider:before {
   }
 
   #nav-tab {
-    height: 18%;
+    height: 25%;
   }
 
   #nav-tab button {
-    font-size: 27px;
     width: 200px;
     height: 100%;
     padding: 20px 10px;
@@ -1433,7 +1435,7 @@ input:checked+.slider:before {
   }
 
   #nav-tab {
-    height: 15%;
+    height: 20%;
   }
 
   #nav-tab button {
@@ -1498,7 +1500,7 @@ input:checked+.slider:before {
   }
 
   #nav-tab {
-    height: 15%;
+    height: 20%;
   }
 
   #nav-tab button {
