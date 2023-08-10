@@ -4,15 +4,10 @@ import data from "../hust/data.json";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslation } from "react-i18next";
 import { MapContext } from "../contexts/tabnamecontext";
 import maplibregl,{ LngLatLike, Map } from "maplibre-gl";
 import { showLocationDetail } from "../map/showinformation";
-library.add(fas);
-
 
 const TabName = () => {
     const { isList, setIsList } = useContext(MapContext)!;
@@ -22,7 +17,9 @@ const TabName = () => {
     const closeTabName = () => {
         setIsList(true);
         setIsMap(true);
-        isCoordinate.setPaintProperty(`3d-building-${isHover}`, 'fill-extrusion-color', '#FFFFFF');
+        if(isHover){
+            isCoordinate.setPaintProperty(`3d-building-${isHover}`, 'fill-extrusion-color', '#FFFFFF');
+        }
     };
 
     const [isKhoa, setIsKhoa] = useState(true); 
@@ -67,15 +64,9 @@ const TabName = () => {
         setIsCuaHang(false);
     };
 
-    function getBounds(coordinates: maplibregl.LngLatLike) {
-        const bounds = new maplibregl.LngLatBounds();
-        bounds.extend(coordinates);
-        return bounds;
-    }
     const {isCoordinate, setIsCoordinate} = useContext(MapContext)!; 
     const { isClose, setIsClose } = useContext(MapContext)!;
     const options = data.features.map((feature) => feature.properties.name);
-    const [listItem, setListItem] = useState(options);
     const { isClickImage, setIsClickImage } = useContext(MapContext)!;
 
     const clickLi = (name: string, index: number) => {
@@ -90,9 +81,6 @@ const TabName = () => {
     
         isCoordinate.setCenter(coordinates);
         isCoordinate.setZoom(18);
-        isCoordinate.fitBounds(getBounds(coordinates), {
-        padding: 100,
-        });
     };
 
     const array = ["training department", "research center", "central department", "library", 'shop'];
@@ -169,9 +157,17 @@ const TabName = () => {
             </table>
         </div>
 
+        {/* <div className="list_tab_name">
+            <button style={{ color: isKhoa ? 'black' : '#9e9c9c', borderBottom: isKhoa ? '2px solid #eac870' : 'none'  }} onClick={khoa} className="nav-link" id="nav-khoa-tab" type="button" role="tab" >{t('tabname.faculty')}</button>
+            <button style={{ color: isVien ? 'black' : '#9e9c9c', borderBottom: isVien ? '2px solid #eac870' : 'none'  }} onClick={vien} className="nav-link" id="nav-vien-tab" type="button" >{t('tabname.institute')}</button>
+            <button style={{ color: isPhong ? 'black' : '#9e9c9c', borderBottom: isPhong ? '2px solid #eac870' : 'none'  }} onClick={phong}  className="nav-link" id="nav-phong-tab"  type="button">{t('tabname.room')}</button>
+            <button style={{ color: isThuVien ? 'black' : '#9e9c9c', borderBottom: isThuVien ? '2px solid #eac870' : 'none'  }} onClick={thuvien}  className="nav-link" id="nav-thuvien-tab" type="button" >{t('tabname.library')}</button>
+            <button style={{ color: isCuaHang ? 'black' : '#9e9c9c', borderBottom: isCuaHang ? '2px solid #eac870' : 'none'  }} onClick={cuahang}  className="nav-link" id="nav-cuahang-tab" type="button">{t('tabname.shops')}</button>
+        </div> */}
+
         <div className="" id="nav-tabContent">
             <ul id="ul__union" ref={ulRef}>
-                {listItem.map((name, index) => (                    
+                {options.map((name, index) => (                    
                     <li key={index} onClick={() => clickLi(name,index)} >
                         <img src="../images/mark.png" alt="" />
                         <p>{name}</p>

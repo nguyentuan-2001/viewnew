@@ -21,7 +21,9 @@ const Detail = () => {
 
     const closeDetail = () => {
         setIsClose(!isClose);
-        isCoordinate.setPaintProperty(`3d-building-${isHover}`, 'fill-extrusion-color', '#FFFFFF');
+        if(isHover){
+            isCoordinate.setPaintProperty(`3d-building-${isHover}`, 'fill-extrusion-color', '#FFFFFF');
+        }
     };
 
     const { isMap, setIsMap } = useContext(MapContext)!;

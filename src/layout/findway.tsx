@@ -39,7 +39,9 @@ const FindWay = () => {
         setStartValue('');
         setEndValue('');
 
-        isCoordinate.setPaintProperty(`3d-building-${isHover}`, 'fill-extrusion-color', '#FFFFFF');
+        if(isHover){
+            isCoordinate.setPaintProperty(`3d-building-${isHover}`, 'fill-extrusion-color', '#FFFFFF');
+        }
     };
 
     const options = data.features.map((feature) => feature.properties.name);

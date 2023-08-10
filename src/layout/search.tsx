@@ -6,7 +6,11 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslation } from "react-i18next";
 import { MapContext } from "../contexts/tabnamecontext";
+import 'maplibre-gl/dist/maplibre-gl.css';
+import data from '../hust/data.json';
+import maplibregl, { Map, Marker } from 'maplibre-gl';
 import MapNew from "./mapnew";
+import { showLocationDetail } from "../map/showinformation";
 library.add(fas);
 
 const Search = () => {
@@ -19,11 +23,84 @@ const Search = () => {
     const closeSearch = () => {
         setIsSearch(true);
         setIsMap(true);
-        if(isCoordinate){
+        if(isHover){
             isCoordinate.setPaintProperty(`3d-building-${isHover}`, 'fill-extrusion-color', '#FFFFFF');
         }
     };
     const {t} = useTranslation();
+    searchAddress(isCoordinate);
+    function getBounds(features: any[]) {
+        const bounds = new maplibregl.LngLatBounds();
+        features.forEach((feature: any) => {
+          bounds.extend(feature.geometry.coordinates);
+        });
+        return bounds;
+    }
+
+    function searchAddress(map: Map){
+        const searchInput = document.getElementById('search__address') as HTMLInputElement;
+        if(searchInput){
+            searchInput.addEventListener('change', () => {
+                const searchText = searchInput.value;
+                const allAddress = data.features.filter((feature: any) => {
+                  return feature.properties.name.toLowerCase().includes(searchText.toLowerCase());
+                });
+            
+                if (allAddress.length > 0) {
+                  const firstAddress = allAddress[0];
+                  const lngLat: [number, number] = firstAddress.geometry.coordinates as [number, number];
+                  map.setCenter(lngLat);
+                  map.setZoom(18);
+                  map.fitBounds(getBounds(allAddress), {
+                    padding: 100
+                  });
+                  
+                  showLocationDetail(firstAddress);
+                }
+            });
+        }
+    }
+
+    const [searchText, setSearchText] = useState<string>('');
+
+    const updateSuggestions = (suggestions: any[], map: any) => {
+        const suggestionsList = document.getElementById('suggestions-list') as HTMLUListElement;
+        suggestionsList.innerHTML = '';
+
+        if (searchText === '') {
+        suggestionsList.style.display = 'none';
+        return;
+        }
+
+        suggestions.forEach(function (suggestion) {
+        const li = document.createElement('li');
+        const img = document.createElement('img');
+        img.src = '../images/mark.png';
+        li.textContent = suggestion.properties.name;
+        li.prepend(img);
+        li.addEventListener('click', function () {
+            const lngLat = suggestion.geometry.coordinates;
+            map.setCenter(lngLat);
+            map.setZoom(18);
+            // map.fitBounds(getBounds(suggestions), {
+            //   padding: 50
+            // });
+            showLocationDetail(suggestion);
+        });
+        suggestionsList.appendChild(li);
+        });
+        suggestionsList.style.display = 'block';
+    };
+
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const searchText = event.target.value;
+        setSearchText(searchText);
+        const filteredSuggestions = data.features.filter(function (feature) {
+        return feature.properties.name.toLowerCase().includes(searchText.toLowerCase());
+        });
+        updateSuggestions(filteredSuggestions, isCoordinate);
+    };
+
   return (
     <div id='search' style={{transform: isSearch ? 'translateX(-300%)' : (isOpenHeader ? 'none' : 'translateX(-60%)')}}>
         <div id='close__detail' onClick={closeSearch} >
@@ -35,11 +112,11 @@ const Search = () => {
         <div>
             <div id='input_search'>
                 <div id='border_input_search'></div>
-                <input type="text" placeholder={t('search.placeholder')} id='search__address' />
+                <input type="text" placeholder={t('search.placeholder')} id='search__address' onChange={handleInputChange}/>
             </div>
             <div id='history__search'>
                 <p>{t('search.recent')}</p>
-                <p>Cổng bắc</p>
+                <p> <FontAwesomeIcon icon="clock" /> Cổng bắc</p>
             </div>
             <div id='list__address'>
                 <p>{t('search.suggest')}</p>

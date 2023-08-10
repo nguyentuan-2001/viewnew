@@ -79,10 +79,17 @@ const Header = () => {
 
     const {t} = useTranslation();
     const {i18n} = useTranslation();
-    const [isBooleanClick, setIsBooleanClick] = useState(true);
+    const [isEnglish, setIsEnglish] = useState(false);
+    const [isVietNamese, setIsVietNamese] = useState(true);
     const changeLanguage = (lng: string) => {
         i18n.changeLanguage(lng);
-        setIsBooleanClick(!isBooleanClick);
+        if (lng === 'en') {
+            setIsEnglish(true);
+            setIsVietNamese(false);
+        } else if (lng === 'vi') {
+            setIsEnglish(false);
+            setIsVietNamese(true);
+        }
     };
 
   return (
@@ -101,10 +108,10 @@ const Header = () => {
                 <div id='line_image'></div>
 
                 <div id='list_p'>
-                    <p onClick={openMap} style={{ color: isMap ? 'black' : '#9e9c9c' }}><FontAwesomeIcon icon="map" /> {t('header.map')}</p>
-                    <p onClick={openList} style={{ color: isList ? '#9e9c9c' : 'black' }}><FontAwesomeIcon icon="map-marked-alt" /> {t('header.area')}</p>
-                    <p onClick={openSearch} style={{ color: isSearch ? '#9e9c9c' : 'black' }}><FontAwesomeIcon icon="search" />  {t('header.search')}</p>
-                    <p onClick={openNavigation}  style={{ color: isNavigation ? '#9e9c9c' : 'black' }}><FontAwesomeIcon icon="directions" />  {t('header.direction')}</p>
+                    <p onClick={openMap} style={{ color: isMap ? 'black' : '#BDBDBD' }}><FontAwesomeIcon icon="map" /> {t('header.map')}</p>
+                    <p onClick={openList} style={{ color: isList ? '#BDBDBD' : 'black' }}><FontAwesomeIcon icon="map-marked-alt" /> {t('header.area')}</p>
+                    <p onClick={openSearch} style={{ color: isSearch ? '#BDBDBD' : 'black' }}><FontAwesomeIcon icon="search" />  {t('header.search')}</p>
+                    <p onClick={openNavigation}  style={{ color: isNavigation ? '#BDBDBD' : 'black' }}><FontAwesomeIcon icon="directions" />  {t('header.direction')}</p>
                 </div>
 
                 <div id='logo'>
@@ -115,12 +122,13 @@ const Header = () => {
                         <input type="checkbox" checked={isSwitchOn} onChange={handleStyleChange} />
                         <span className="slider"></span>
                     </label>
+                    <p>{isEnglish ? 'Overview': 'Toàn cảnh'}</p>
                 </div>
                 <div className="language">
-                    <div className="en" style={{borderColor: isBooleanClick ? 'black': '#E34A66', color: isBooleanClick ? 'black': '#E34A66'}}>
+                    <div className="en" style={{borderColor: isEnglish ? '#D8AF5F' : '#9F9F9F', color: isEnglish ? '#D8AF5F' : '#9F9F9F'}}>
                         <span onClick={() => changeLanguage('en')}>EN</span>
                     </div>
-                    <div className="vi" style={{borderColor: isBooleanClick ? '#E34A66': 'black', color: isBooleanClick ? '#E34A66': 'black'}}>
+                    <div className="vi" style={{borderColor: isVietNamese ? '#D8AF5F' : '#9F9F9F', color: isVietNamese ? '#D8AF5F' : '#9F9F9F'}}>
                         <span onClick={() => changeLanguage('vi')}>VN</span>
                     </div>
                 </div>
@@ -130,10 +138,10 @@ const Header = () => {
         <div className="language_mobile">
             <img src="../images/digiuni.png" alt="" />
             <div>
-                <div className="en" style={{borderColor: isBooleanClick ? 'black': '#E34A66', color: isBooleanClick ? 'black': '#E34A66'}}>
+                <div className="en" style={{borderColor: isEnglish ? '#D8AF5F' : '#BDBDBD', color: isEnglish ? '#D8AF5F' : '#BDBDBD'}}>
                     <span onClick={() => changeLanguage('en')}>EN</span>
                 </div>
-                <div className="vi" style={{borderColor: isBooleanClick ? '#E34A66': 'black', color: isBooleanClick ? '#E34A66': 'black'}}>
+                <div className="vi" style={{borderColor: isVietNamese ? '#D8AF5F' : '#BDBDBD', color: isVietNamese ? '#D8AF5F' : '#BDBDBD'}}>
                     <span onClick={() => changeLanguage('vi')}>VN</span>
                 </div>
             </div>
@@ -141,10 +149,10 @@ const Header = () => {
 
         <div className="header_all_mobile">
             <ul id="ul_list_mobile" >
-                <li><div onClick={openMap} style={{ color: isMap ? 'black' : '#9e9c9c' }}><FontAwesomeIcon icon="map" /><p> {t('header.map')}</p></div></li>
-                <li><div onClick={openList} style={{ color: isList ? '#9e9c9c' : 'black' }}><FontAwesomeIcon icon="map-marked-alt" /><p> {t('header.area')}</p></div></li>
-                <li><div onClick={openSearch} style={{ color: isSearch ? '#9e9c9c' : 'black' }}><FontAwesomeIcon icon="search" /><p>  {t('header.search')}</p></div></li>
-                <li><div onClick={openNavigation}  style={{ color: isNavigation ? '#9e9c9c' : 'black' }}><FontAwesomeIcon icon="directions" /> <p> {t('header.direction')}</p></div></li>
+                <li><div onClick={openMap} style={{ color: isMap ? 'black' : '#BDBDBD' }}><FontAwesomeIcon icon="map" /><p style={{ color: isMap ? 'black' : '#BDBDBD' }}> {t('header.map')}</p></div></li>
+                <li><div onClick={openList} style={{ color: isList ? '#BDBDBD' : 'black' }}><FontAwesomeIcon icon="map-marked-alt" /><p style={{ color: isList ? '#BDBDBD' : 'black' }}> {t('header.area')}</p></div></li>
+                <li><div onClick={openSearch} style={{ color: isSearch ? '#BDBDBD' : 'black' }}><FontAwesomeIcon icon="search" /><p style={{ color: isSearch ? '#BDBDBD' : 'black' }}>  {t('header.search')}</p></div></li>
+                <li><div onClick={openNavigation}  style={{ color: isNavigation ? '#BDBDBD' : 'black' }}><FontAwesomeIcon icon="directions" /> <p style={{ color: isNavigation ? '#BDBDBD' : 'black' }}> {t('header.direction')}</p></div></li>
             </ul>
         </div>
     </div>

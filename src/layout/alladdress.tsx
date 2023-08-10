@@ -18,7 +18,9 @@ const Alladdress = () => {
     
     const closeSearch = () => {
         setIsList(true);
-        isCoordinate.setPaintProperty(`3d-building-${isHover}`, 'fill-extrusion-color', '#FFFFFF');
+        if(isHover){
+            isCoordinate.setPaintProperty(`3d-building-${isHover}`, 'fill-extrusion-color', '#FFFFFF');
+        }
     };
     const menuRef = useRef<HTMLUListElement>(null);
 

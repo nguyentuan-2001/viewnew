@@ -76,19 +76,19 @@ const MapNew: React.FC<PropsMap> = ({
         setCurrentStyle(green)
       }
 
-      searchAddress(map);
-      const searchInput = document.getElementById("search__address") as HTMLInputElement;
-      if (searchInput) {
-        searchInput.addEventListener("input", () => {
-          const searchText = searchInput.value;
-          const suggestions = data.features.filter(function (feature) {
-            return feature.properties.name
-              .toLowerCase()
-              .includes(searchText.toLowerCase());
-          });
-          updateSuggestions(suggestions, map);
-        });
-      }
+      // searchAddress(map);
+      // const searchInput = document.getElementById("search__address") as HTMLInputElement;
+      // if (searchInput) {
+      //   searchInput.addEventListener("input", () => {
+      //     const searchText = searchInput.value;
+      //     const suggestions = data.features.filter(function (feature) {
+      //       return feature.properties.name
+      //         .toLowerCase()
+      //         .includes(searchText.toLowerCase());
+      //     });
+      //     updateSuggestions(suggestions, map);
+      //   });
+      // }
     });
 
     var nav = new maplibregl.NavigationControl({
@@ -177,12 +177,12 @@ const MapNew: React.FC<PropsMap> = ({
     });
 
    
-    map.on('click', (e) => {
-      setIsMap(true);
-      setIsNavigation(true);
-      setIsSearch(true);
-      setIsList(true)
-    })
+    // map.on('click', (e) => {
+    //   setIsMap(true);
+    //   setIsNavigation(true);
+    //   setIsSearch(true);
+    //   setIsList(true)
+    // })
 
 
     return () => map.remove();
