@@ -159,9 +159,25 @@
 }
 
 #nav-tabContent {
-  height: calc(100% - 80px - 25%);
+  height: calc(100% - 80px - 20%);
   overflow: auto;
   padding-top: 10px;
+  scrollbar-color: #888888 #dddddd;
+
+  &::-webkit-scrollbar {
+    width: 100px; 
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #888888; 
+    border-radius: 15px; 
+    height: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #dddddd; 
+    border-radius: 15px;
+  }
 }
 
 #nav-tab button {
@@ -965,7 +981,9 @@ input:checked+.slider:before {
     padding: 20px 10px;
     font-size: 15px;
   }
-
+  #nav-tabContent{
+    height: calc(100% - 80px - 25%);
+  }
   #ul__union {
     overflow: auto;
     padding: 0px 20px;
@@ -1079,11 +1097,14 @@ input:checked+.slider:before {
   #nav-tab {
     height: 25%;
   }
-
+  #nav-tabContent{
+    height: calc(100% - 80px - 25%);
+  }
   #nav-tab button {
     width: 160px;
     height: 100%;
     padding: 20px 10px;
+    font-size: 16px;
   }
 
   #ul__union {
@@ -1188,7 +1209,9 @@ input:checked+.slider:before {
   #nav-tab {
     height: 25%;
   }
-
+  #nav-tabContent{
+    height: calc(100% - 80px - 25%);
+  }
   #nav-tab button {
     width: 180px;
     height: 100%;
@@ -1290,7 +1313,9 @@ input:checked+.slider:before {
   #nav-tab {
     height: 25%;
   }
-
+  #nav-tabContent{
+    height: calc(100% - 80px - 25%);
+  }
   #nav-tab button {
     width: 180px;
     height: 100%;
@@ -1370,9 +1395,11 @@ input:checked+.slider:before {
   }
 
   #nav-tab {
-    height: 25%;
+    height: 20%;
   }
-
+  #nav-tabContent{
+    height: calc(100% - 80px - 20%);
+  }
   #nav-tab button {
     width: 200px;
     height: 100%;
@@ -1437,7 +1464,9 @@ input:checked+.slider:before {
   #nav-tab {
     height: 20%;
   }
-
+  #nav-tabContent{
+    height: calc(100% - 80px - 20%);
+  }
   #nav-tab button {
     width: 200px;
     height: 100%;
@@ -1502,7 +1531,9 @@ input:checked+.slider:before {
   #nav-tab {
     height: 20%;
   }
-
+  #nav-tabContent{
+    height: calc(100% - 80px - 20%);
+  }
   #nav-tab button {
     width: 200px;
     height: 100%;
