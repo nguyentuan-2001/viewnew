@@ -139,21 +139,21 @@
   display: flex;
   width: 100%;
   overflow-y: hidden;
-  
+
   scrollbar-color: #888888 #dddddd;
 
   &::-webkit-scrollbar {
-    width: 100px; 
+    width: 100px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #888888; 
-    border-radius: 15px; 
+    background-color: #888888;
+    border-radius: 15px;
     height: 3px;
   }
 
   &::-webkit-scrollbar-track {
-    background-color: #dddddd; 
+    background-color: #dddddd;
     border-radius: 15px;
   }
 }
@@ -165,17 +165,17 @@
   scrollbar-color: #888888 #dddddd;
 
   &::-webkit-scrollbar {
-    width: 100px; 
+    width: 100px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #888888; 
-    border-radius: 15px; 
+    background-color: #888888;
+    border-radius: 15px;
     height: 3px;
   }
 
   &::-webkit-scrollbar-track {
-    background-color: #dddddd; 
+    background-color: #dddddd;
     border-radius: 15px;
   }
 }
@@ -234,6 +234,7 @@
 #ul__union li p {
   margin-left: 10px;
   margin-top: 10px;
+  font-size: 1em;
 }
 
 #ul__union li img {
@@ -282,10 +283,10 @@
 
 #close__detail {
   height: 40px;
-  margin: 10px 10px 30px 0px;
+  margin: 10px 10px 20px 0px;
   cursor: pointer;
   display: flex;
-  justify-content: end;
+  justify-content:  flex-end;
 }
 
 #close__detail svg {
@@ -735,10 +736,11 @@
 
 #input_onoff {
   display: flex;
-  margin-top: 20px;
+  margin-top: 30px;
   justify-content: center;
 }
-#input_onoff p{
+
+#input_onoff p {
   color: #000000;
   margin-right: 10px;
 }
@@ -902,6 +904,7 @@ input:checked+.slider:before {
 .language {
   display: flex;
   justify-content: center;
+  margin: 20px 0;
 }
 
 .language>div {
@@ -927,13 +930,61 @@ input:checked+.slider:before {
   height: 30px;
 }
 
-.language_mobile>div {
+.setting {
   justify-content: flex-end;
   display: flex;
   width: 100%;
+  align-items: center;
+  margin-right: 20px;
+}
+#icon_setting{
+  cursor: pointer;
+}
+#icon_setting>svg{
+  padding: 9px;
+  border: 1px solid #bdbdbd;
+  border-radius: 50%;
+}
+/* .message_setting{
+  background-color: black;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50px;
+} */
+/* .icon_setting>div {
+  border: 1px solid gray;
+  border-radius: 8px;
+  margin: 5px;
+  cursor: pointer;
+  height: 30px;
+  padding: 2px 10px 10px;
+  margin-top: 10px;
+} */
+.message_setting {
+  position: absolute;
+  width: 130px;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid rgb(216, 175, 95);
+  background-color: #fff;
+  transform: translate(10px,80px);
+  border-radius: 15px;
 }
 
-.language_mobile>div>div {
+.message_setting::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translate(140%, -50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent rgb(216, 175, 95) transparent;
+}
+.en, .vi{
   border: 1px solid gray;
   border-radius: 8px;
   margin: 5px;
@@ -942,7 +993,22 @@ input:checked+.slider:before {
   padding: 2px 10px 10px;
   margin-top: 10px;
 }
-
+.change_language{
+  display: flex;
+  justify-content: space-around;
+}
+.button_switch{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 7px;
+}
+.button_switch .switch{
+  transform: scale(0.8);
+}
+.button_switch p{
+  font-size: 11px;
+  margin-top: 5px;
+}
 
 @media only screen and (max-width: 281px) {
   .language_mobile {
@@ -972,34 +1038,42 @@ input:checked+.slider:before {
     height: calc(100% - 50px);
     margin-top: 50px;
   }
-  #nav-tab{
+
+  #nav-tab {
     height: 25%;
   }
+
   #nav-tab button {
     width: 160px;
     height: 100%;
     padding: 20px 10px;
     font-size: 15px;
   }
-  #nav-tabContent{
+
+  #nav-tabContent {
     height: calc(100% - 80px - 25%);
   }
+
   #ul__union {
     overflow: auto;
     padding: 0px 20px;
     max-height: 80%;
   }
-#ul__union img{
-  transform: scale(0.7);
-}
-#ul__union p{
-  font-size: 10px;
-  margin-left: 0px !important;
-  margin-bottom: 0;
-}
-#ul__union li{
-  min-height: 50px;
-}
+
+  #ul__union img {
+    transform: scale(0.7);
+  }
+
+  #ul__union p {
+    font-size: 0.7em !important;
+    margin-left: 0px !important;
+    margin-bottom: 0;
+  }
+
+  #ul__union li {
+    min-height: 50px;
+  }
+
   #search {
     width: 100%;
     margin-left: 0%;
@@ -1059,7 +1133,6 @@ input:checked+.slider:before {
   .language_mobile {
     display: flex;
   }
-
   .header_all_mobile {
     display: block !important;
   }
@@ -1097,13 +1170,15 @@ input:checked+.slider:before {
   #nav-tab {
     height: 25%;
   }
-  #nav-tabContent{
+
+  #nav-tabContent {
     height: calc(100% - 80px - 25%);
   }
+
   #nav-tab button {
     width: 160px;
     height: 100%;
-    padding: 20px 10px;
+    padding: 10px 10px;
     font-size: 16px;
   }
 
@@ -1111,11 +1186,14 @@ input:checked+.slider:before {
     overflow: auto;
     padding: 0px 20px;
   }
-  #ul__union p{
-    font-size: 14px;
+
+  #ul__union p {
+    font-size: 0.8em !important;
     margin-top: 0px !important;
   }
-
+  #ul__union li{
+    min-height: 60px;
+  }
   #search {
     margin-left: 0%;
     width: 100%;
@@ -1209,9 +1287,11 @@ input:checked+.slider:before {
   #nav-tab {
     height: 25%;
   }
-  #nav-tabContent{
+
+  #nav-tabContent {
     height: calc(100% - 80px - 25%);
   }
+
   #nav-tab button {
     width: 180px;
     height: 100%;
@@ -1222,7 +1302,8 @@ input:checked+.slider:before {
     overflow: auto;
     padding: 0px 20px;
   }
-  #ul__union p{
+
+  #ul__union p {
     font-size: 16px;
     margin-top: 0px !important;
   }
@@ -1313,9 +1394,11 @@ input:checked+.slider:before {
   #nav-tab {
     height: 25%;
   }
-  #nav-tabContent{
+
+  #nav-tabContent {
     height: calc(100% - 80px - 25%);
   }
+
   #nav-tab button {
     width: 180px;
     height: 100%;
@@ -1397,9 +1480,11 @@ input:checked+.slider:before {
   #nav-tab {
     height: 20%;
   }
-  #nav-tabContent{
+
+  #nav-tabContent {
     height: calc(100% - 80px - 20%);
   }
+
   #nav-tab button {
     width: 200px;
     height: 100%;
@@ -1464,9 +1549,11 @@ input:checked+.slider:before {
   #nav-tab {
     height: 20%;
   }
-  #nav-tabContent{
+
+  #nav-tabContent {
     height: calc(100% - 80px - 20%);
   }
+
   #nav-tab button {
     width: 200px;
     height: 100%;
@@ -1531,9 +1618,11 @@ input:checked+.slider:before {
   #nav-tab {
     height: 20%;
   }
-  #nav-tabContent{
+
+  #nav-tabContent {
     height: calc(100% - 80px - 20%);
   }
+
   #nav-tab button {
     width: 200px;
     height: 100%;

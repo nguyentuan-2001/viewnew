@@ -91,7 +91,10 @@ const Header = () => {
             setIsVietNamese(true);
         }
     };
-
+    const [isOpenSetting, setIsOpenSetting] = useState(true);
+    const openSetting = () =>{
+        setIsOpenSetting(!isOpenSetting);
+    }
   return (
     <div style={{ height:'100%'}}>
         <div id="icon__open" onClick={openLeft} style={{display: isOpenHeader ? 'none' : 'block'}}>
@@ -137,12 +140,27 @@ const Header = () => {
 
         <div className="language_mobile">
             <img src="../images/digiuni.png" alt="" />
-            <div>
-                <div className="en" style={{borderColor: isEnglish ? '#D8AF5F' : '#BDBDBD', color: isEnglish ? '#D8AF5F' : '#BDBDBD'}}>
-                    <span onClick={() => changeLanguage('en')}>EN</span>
+            <div className="setting">
+                <div id="icon_setting" onClick={openSetting} >
+                    <FontAwesomeIcon icon="sliders-h" style={{ borderColor: isOpenSetting ? '#bdbdbd' : '#D8AF5F',color: isOpenSetting ? 'black' : '#D8AF5F' }}/>
                 </div>
-                <div className="vi" style={{borderColor: isVietNamese ? '#D8AF5F' : '#BDBDBD', color: isVietNamese ? '#D8AF5F' : '#BDBDBD'}}>
-                    <span onClick={() => changeLanguage('vi')}>VN</span>
+                
+                <div className="message_setting" style={{ display: isOpenSetting ? 'none' : 'block'}}>
+                    <div className="change_language">
+                        <div className="en" style={{borderColor: isEnglish ? '#D8AF5F' : '#BDBDBD', color: isEnglish ? '#D8AF5F' : '#BDBDBD'}}>
+                            <span onClick={() => changeLanguage('en')}>EN</span>
+                        </div>
+                        <div className="vi" style={{borderColor: isVietNamese ? '#D8AF5F' : '#BDBDBD', color: isVietNamese ? '#D8AF5F' : '#BDBDBD'}}>
+                            <span onClick={() => changeLanguage('vi')}>VN</span>
+                        </div>
+                    </div>
+                    <div className="button_switch">
+                        <p>{isEnglish ? 'Overview': 'Toàn cảnh'}</p>
+                        <label className="switch">
+                            <input type="checkbox" checked={isSwitchOn} onChange={handleStyleChange} />
+                            <span className="slider"></span>
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
