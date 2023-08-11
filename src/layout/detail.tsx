@@ -136,19 +136,19 @@ const Detail = () => {
                 <div className="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                     <div id='office'>
                         <img src="../images/point.png" alt="" />
-                        <p>Văn phòng : Toà C10 - 309 <a href="#">ĐH Bách khoa</a></p>
+                        <p>Văn phòng : <span id='ofice'></span></p>
                     </div>
                     <div id='phone'>
                         <img src="../images/phone.png" alt="" />
-                        <p>0123 456 789</p>
+                        <p id='phone_number'></p>
                     </div>
                     <div id='sms'>
                         <img src="../images/sms.png" alt="" />
-                        <p><a href="#">sme@hust.edu.vn</a></p>
+                        <p><a href="#" id='link_sms'></a></p>
                     </div>
                     <div id='web'>
                         <img src="../images/web.png" alt="" />
-                        <p><a href="#">sme.hust.edu.vn</a></p>
+                        <p><a href="https://hust.edu.vn/" id='link_web'></a></p>
                     </div>
                 </div>
                 <div className="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">

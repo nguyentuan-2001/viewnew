@@ -3,8 +3,8 @@ import maplibregl, { LngLatLike, Map, Marker } from "maplibre-gl";
 import "../css/component.css";
 import "maplibre-gl/dist/maplibre-gl.css";
 import overMap from "../map/topographic";
-import { searchAddress, updateSuggestions } from "../map/search";
 import data from "../hust/data.json";
+import dataDetail from "../hust/dataDetail.json";
 import { MapContext } from "../contexts/tabnamecontext";
 import { showLocationDetail } from "../map/showinformation";
 import nha from '../hust/nha.json';
@@ -75,6 +75,7 @@ const MapNew: React.FC<PropsMap> = ({
       }else{
         setCurrentStyle(green)
       }
+
     });
 
     const nav = new maplibregl.NavigationControl({
@@ -158,7 +159,7 @@ const MapNew: React.FC<PropsMap> = ({
     map.on('click', (e) => {
       const features = map.queryRenderedFeatures(e.point, { layers: nha.features.map((feature: any) => `3d-building-${feature.properties.osm_id}`) });
       features.forEach((feature) => {
-        checkIds(feature, data);
+        checkIds(feature, dataDetail);
       });
     });
 

@@ -27,6 +27,31 @@ export function showLocationDetail(location: any) {
     if (description) {
       description.innerHTML = desc;
     }
+
+    const address = location.properties.address;
+    const add = document.getElementById("ofice") as HTMLImageElement;
+    if (add) {
+      add.innerHTML = address;
+    }
+
+    const phone = location.properties.phone;
+    const phone_number = document.getElementById("phone_number") as HTMLImageElement;
+    if (phone_number) {
+      phone_number.innerHTML = phone;
+    }
+
+    const mail = location.properties.mail;
+    const sms = document.getElementById("link_sms") as HTMLImageElement;
+    if (sms) {
+      sms.innerHTML = mail;
+    }
+
+    const web = location.properties.web;
+    const link_web = document.getElementById("link_web") as HTMLImageElement;
+    if (link_web) {
+      link_web.innerHTML = web;
+    }
+
   }
 
 export function openRightPanel() {

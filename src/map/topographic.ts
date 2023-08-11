@@ -1,6 +1,6 @@
 import maplibregl, { Map } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import data from '../hust/data.json';
+import data from '../hust/dataDetail.json';
 import nha from '../hust/nha.json';
 import features from '../hust/features.json';
 import { object3d, object3dcar, object3dcube} from './object3d';

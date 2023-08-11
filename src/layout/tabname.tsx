@@ -25,43 +25,32 @@ const TabName = () => {
     const [isKhoa, setIsKhoa] = useState(true); 
     const [isVien, setIsVien] = useState(false); 
     const [isPhong, setIsPhong] = useState(false); 
-    const [isThuVien, setIsThuVien] = useState(false); 
+    const [isToChuc, setIsToChuc] = useState(false); 
     const [isCuaHang, setIsCuaHang] = useState(false); 
 
     const khoa = () => {
         setIsKhoa(true);
         setIsVien(false);
         setIsPhong(false);
-        setIsThuVien(false);
-        setIsCuaHang(false);
+        setIsToChuc(false);
     };
     const vien = () => {
         setIsVien(true);
         setIsKhoa(false);
         setIsPhong(false);
-        setIsThuVien(false);
-        setIsCuaHang(false);
+        setIsToChuc(false);
     };
     const phong = () => {
         setIsKhoa(false);
         setIsVien(false);
         setIsPhong(true);
-        setIsThuVien(false);
-        setIsCuaHang(false);
+        setIsToChuc(false);
     };
-    const cuahang = () => {
+    const tochuc = () => {
         setIsVien(false);
         setIsKhoa(false);
         setIsPhong(false);
-        setIsThuVien(false);
-        setIsCuaHang(true);
-    };
-    const thuvien = () => {
-        setIsVien(false);
-        setIsKhoa(false);
-        setIsPhong(false);
-        setIsThuVien(true);
-        setIsCuaHang(false);
+        setIsToChuc(true);
     };
 
     const {isCoordinate, setIsCoordinate} = useContext(MapContext)!; 
@@ -83,7 +72,7 @@ const TabName = () => {
         isCoordinate.setZoom(18);
     };
 
-    const array = ["training department", "research center", "central department", "library", 'shop'];
+    const array = ["1","2","3","4"];
     const ulRef = useRef(null);
     useEffect(() => {
         const ulElement = ulRef.current as any;
@@ -116,9 +105,6 @@ const TabName = () => {
             handleButtonClick(array[3]);
         });
     
-        document.getElementById("nav-cuahang-tab")?.addEventListener("click", () => {
-            handleButtonClick(array[4]);
-        });
     }, []);
     const {isOpenHeader, setIsOpenHeader} = useContext(MapContext)!; 
     const {t} = useTranslation();
@@ -147,23 +133,12 @@ const TabName = () => {
                     <button style={{ color: isPhong ? 'black' : '#9e9c9c', borderBottom: isPhong ? '2px solid #eac870' : 'none'  }} onClick={phong}  className="nav-link" id="nav-phong-tab"  type="button">{t('tabname.room')}</button>
                 </td>
                 <td>
-                    <button style={{ color: isThuVien ? 'black' : '#9e9c9c', borderBottom: isThuVien ? '2px solid #eac870' : 'none'  }} onClick={thuvien}  className="nav-link" id="nav-thuvien-tab" type="button" >{t('tabname.library')}</button>
-                </td>
-                <td>
-                    <button style={{ color: isCuaHang ? 'black' : '#9e9c9c', borderBottom: isCuaHang ? '2px solid #eac870' : 'none'  }} onClick={cuahang}  className="nav-link" id="nav-cuahang-tab" type="button">{t('tabname.shops')}</button>
+                    <button style={{ color: isToChuc ? 'black' : '#9e9c9c', borderBottom: isToChuc ? '2px solid #eac870' : 'none'  }} onClick={tochuc}  className="nav-link" id="nav-thuvien-tab" type="button" >{t('tabname.unions')}</button>
                 </td>
             </tr>
             </tbody>
             </table>
         </div>
-
-        {/* <div className="list_tab_name">
-            <button style={{ color: isKhoa ? 'black' : '#9e9c9c', borderBottom: isKhoa ? '2px solid #eac870' : 'none'  }} onClick={khoa} className="nav-link" id="nav-khoa-tab" type="button" role="tab" >{t('tabname.faculty')}</button>
-            <button style={{ color: isVien ? 'black' : '#9e9c9c', borderBottom: isVien ? '2px solid #eac870' : 'none'  }} onClick={vien} className="nav-link" id="nav-vien-tab" type="button" >{t('tabname.institute')}</button>
-            <button style={{ color: isPhong ? 'black' : '#9e9c9c', borderBottom: isPhong ? '2px solid #eac870' : 'none'  }} onClick={phong}  className="nav-link" id="nav-phong-tab"  type="button">{t('tabname.room')}</button>
-            <button style={{ color: isThuVien ? 'black' : '#9e9c9c', borderBottom: isThuVien ? '2px solid #eac870' : 'none'  }} onClick={thuvien}  className="nav-link" id="nav-thuvien-tab" type="button" >{t('tabname.library')}</button>
-            <button style={{ color: isCuaHang ? 'black' : '#9e9c9c', borderBottom: isCuaHang ? '2px solid #eac870' : 'none'  }} onClick={cuahang}  className="nav-link" id="nav-cuahang-tab" type="button">{t('tabname.shops')}</button>
-        </div> */}
 
         <div className="" id="nav-tabContent">
             <ul id="ul__union" ref={ulRef}>

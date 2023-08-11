@@ -9,8 +9,7 @@
         "faculty": "Faculty - Training Institute",
         "institute": "Institute - Research Center",
         "room": "Room - Department - Center",
-        "library":"Library - Classroom",
-        "shops":"Shops - Restaurants"
+        "unions":"The Unions"
     },
     "search":{
         "placeholder":"Search area name",

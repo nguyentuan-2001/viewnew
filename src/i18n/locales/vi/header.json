@@ -9,8 +9,7 @@
         "faculty": "Khoa - Viện đào tạo",
         "institute": "Viện - Trung tâm nghiên cứu",
         "room": "Phòng - Ban -  Trung tâm",
-        "library":"Thư viện - Phòng học",
-        "shops":"Cửa hàng - Quán xá"
+        "unions":"Các tổ chức đoàn thể"
     },
     "search":{
         "placeholder":"Tìm kiếm tên khu vực",
