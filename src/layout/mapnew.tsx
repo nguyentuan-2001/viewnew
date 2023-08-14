@@ -152,7 +152,7 @@ const MapNew: React.FC<PropsMap> = ({
         }
       });
     });
-
+    
     const checkIds = (clickedFeature: any, data: any) => {
       const clickedId = clickedFeature.properties.osm_id;
       setIsHover(clickedId)
@@ -172,10 +172,17 @@ const MapNew: React.FC<PropsMap> = ({
         setIsNavigation(true);
         setIsClickImage(name);
         showLocationDetail(matchingFeature);
-        map.setCenter(coordinates);
+        //map.setCenter(coordinates);
         map.setZoom(18);
         marker.setLngLat(coordinates);
 
+        map.flyTo({
+          center: coordinates,
+          zoom: 18,
+          speed: 0.6, // Tốc độ animation (0.2 là chậm nhất)
+          essential: true
+        });
+        
         // Cập nhật biến clickedBuildingId với ID của tòa nhà được click
         clickedBuildingId = clickedId;
         map.setPaintProperty(`3d-building-${clickedBuildingId}`, 'fill-extrusion-color', '#749BC2');

@@ -32,8 +32,16 @@ export function updateSuggestions(suggestions: any[], map: Map, marker: Marker) 
             map.setCenter(lngLat as any);
             map.setZoom(18);
             // map.fitBounds(getBounds(suggestions), {
-            //   padding: 50
+            //   padding: 200
             // });
+
+            // map.flyTo({
+            //   center: lngLat as any,
+            //   zoom: 18,
+            //   speed: 0.7, // Tốc độ animation (0.2 là chậm nhất)
+            //   essential: true
+            // });
+
             marker.setLngLat(lngLat);
             showLocationDetail(suggestion);
         });
