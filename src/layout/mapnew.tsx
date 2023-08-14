@@ -29,6 +29,7 @@ const MapNew: React.FC<PropsMap> = ({
   const {isCoordinate, setIsCoordinate} = useContext(MapContext)!;  
   const {isSwitchOn, setIsSwitchOn} = useContext(MapContext)!;
   const {isHover, setIsHover} = useContext(MapContext)!;
+  const {isMarker, setIsMarker} = useContext(MapContext)!;
 
   const maptiler = 'https://api.maptiler.com/maps/fefc1891-4e0d-4102-a51f-09768f839b85/style.json?key=S1qTEATai9KydkenOF6W';
   const green: any = {
@@ -69,8 +70,18 @@ const MapNew: React.FC<PropsMap> = ({
 
     overMap(map);
 
+    const marker = new Marker({
+      color: "#4477CE",
+      draggable: false
+    })
+      .setLngLat([105.84304680202487,21.0063930995241])
+      .addTo(map);
+      setIsMarker(marker);
+
     map.on("load", () => {
-      searchAddress(map);
+      
+  
+      searchAddress(map,marker);
       const searchInput = document.getElementById("search__address") as HTMLInputElement;
       if (searchInput) {
         searchInput.addEventListener("input", () => {
@@ -80,7 +91,7 @@ const MapNew: React.FC<PropsMap> = ({
               .toLowerCase()
               .includes(searchText.toLowerCase());
           });
-          updateSuggestions(suggestions, map);
+          updateSuggestions(suggestions, map, marker);
         });
       }
 
@@ -163,6 +174,7 @@ const MapNew: React.FC<PropsMap> = ({
         showLocationDetail(matchingFeature);
         map.setCenter(coordinates);
         map.setZoom(18);
+        marker.setLngLat(coordinates);
 
         // Cập nhật biến clickedBuildingId với ID của tòa nhà được click
         clickedBuildingId = clickedId;

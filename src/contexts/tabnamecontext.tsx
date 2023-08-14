@@ -38,6 +38,9 @@ interface MapContextProps {
     isHover: any, 
     setIsHover: any
 
+    isMarker: any, 
+    setIsMarker: any
+
 }
 interface PropsAuthContext {
     children: ReactNode;
@@ -93,6 +96,9 @@ const MapProvider: React.FC<PropsAuthContext> = ({ children }) => {
         setIsHover,
         isOpenHeader, 
         setIsOpenHeader,
+
+        isMarker, 
+        setIsMarker
 
     };
 

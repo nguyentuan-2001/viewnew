@@ -4,7 +4,7 @@ import data from '../hust/data.json';
 import { showLocationDetail } from './showinformation';
 
 
-export function updateSuggestions(suggestions: any[], map: Map) {
+export function updateSuggestions(suggestions: any[], map: Map, marker: Marker) {
     const searchInput = document.getElementById('search__address') as HTMLInputElement;
     const suggestionsList = document.getElementById('suggestions-list') as HTMLSelectElement;
     const searchText = searchInput.value.trim();
@@ -34,6 +34,7 @@ export function updateSuggestions(suggestions: any[], map: Map) {
             // map.fitBounds(getBounds(suggestions), {
             //   padding: 50
             // });
+            marker.setLngLat(lngLat);
             showLocationDetail(suggestion);
         });
         suggestionsList.appendChild(li);
@@ -41,7 +42,7 @@ export function updateSuggestions(suggestions: any[], map: Map) {
     suggestionsList.style.display = 'block';
 }
 
-export function searchAddress(map: Map){
+export function searchAddress(map: Map, marker: Marker){
   const searchInput = document.getElementById('search__address') as HTMLInputElement;
   searchInput.addEventListener('change', () => {
     const searchText = searchInput.value;
@@ -65,7 +66,7 @@ export function searchAddress(map: Map){
       // map.fitBounds(getBounds(allAddress), {
       //   padding: 50
       // });
-      
+      marker.setLngLat(lngLat);
       showLocationDetail(firstAddress);
     }
   });

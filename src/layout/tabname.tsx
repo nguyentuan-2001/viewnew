@@ -57,6 +57,7 @@ const TabName = () => {
     const { isClose, setIsClose } = useContext(MapContext)!;
     const options = data.features.map((feature) => feature.properties.name);
     const { isClickImage, setIsClickImage } = useContext(MapContext)!;
+    const {isMarker, setIsMarker} = useContext(MapContext)!;
 
     const clickLi = (name: string, index: number) => {
         const datas = data.features[index];
@@ -67,6 +68,7 @@ const TabName = () => {
         setIsClose(false);
         showLocationDetail(datas);
         setIsClickImage(name as any);
+        isMarker.setLngLat(coordinates);
     
         isCoordinate.setCenter(coordinates);
         isCoordinate.setZoom(18);

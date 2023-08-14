@@ -1668,38 +1668,6 @@ input:checked+.slider:before {
   }
 }
 
-/* .list_tab_name{
-  height: 17%;
-  display: flex;
-  min-width: 100%;
-  overflow: auto;
-  padding-bottom: 50px;
-  overflow-y: hidden;
-
-  scrollbar-color: #888888 #dddddd;
-
-  &::-webkit-scrollbar {
-    width: 100px; 
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: #888888; 
-    border-radius: 15px; 
-    height: 3px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background-color: #dddddd; 
-    border-radius: 15px;
-  }
+.maplibregl-marker{
+  margin-top: -30px;
 }
-.list_tab_name button{
-  width: 20%;
-  min-width: 180px;
-  color: #000000;
-  font-size: 20px;
-  font-weight: bold;
-  font-family: "Noto Serif", serif;
-  cursor: pointer;
-  padding: 0 20px;
-} */

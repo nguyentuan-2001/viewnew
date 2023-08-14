@@ -29,41 +29,7 @@ const Search = () => {
         }
     };
     const {t} = useTranslation();
-    // searchAddress(isCoordinate);
-    // function getBounds(features: any[]) {
-    //     const bounds = new maplibregl.LngLatBounds();
-    //     features.forEach((feature: any) => {
-    //       bounds.extend(feature.geometry.coordinates);
-    //     });
-    //     return bounds;
-    // }
-
-    // function searchAddress(map: Map){
-    //     const searchInput = document.getElementById('search__address') as HTMLInputElement;
-    //     if(searchInput){
-    //         searchInput.addEventListener('change', () => {
-    //             const searchText = searchInput.value;
-    //             const allAddress = data.features.filter((feature: any) => {
-    //               return feature.properties.name.toLowerCase().includes(searchText.toLowerCase());
-    //             });
-            
-    //             if (allAddress.length > 0) {
-    //               const firstAddress = allAddress[0];
-    //               const lngLat: [number, number] = firstAddress.geometry.coordinates as [number, number];
-    //               map.setCenter(lngLat);
-    //               map.setZoom(18);
-    //               map.fitBounds(getBounds(allAddress), {
-    //                 padding: 100
-    //               });
-                  
-    //               showLocationDetail(firstAddress);
-    //             }
-    //         });
-    //     }
-    // }
    
-    
-
   return (
     <div id='search' style={{transform: isSearch ? 'translateX(-300%)' : (isOpenHeader ? 'none' : 'translateX(-60%)')}}>
         <div id='close__detail' onClick={closeSearch} >
