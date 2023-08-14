@@ -29,7 +29,7 @@ export function updateSuggestions(suggestions: any[], map: Map) {
         li.prepend(img); 
         li.addEventListener('click', function() {
             const lngLat= suggestion.geometry.coordinates;
-            map.setCenter(lngLat);
+            map.setCenter(lngLat as any);
             map.setZoom(18);
             // map.fitBounds(getBounds(suggestions), {
             //   padding: 50
@@ -49,22 +49,22 @@ export function searchAddress(map: Map){
       return feature.properties.name.toLowerCase().includes(searchText.toLowerCase());
     });
 
-    function getBounds(features: any[]) {
-      const bounds = new maplibregl.LngLatBounds();
-      features.forEach((feature: any) => {
-        bounds.extend(feature.geometry.coordinates);
-      });
-      return bounds;
-    }
+    // function getBounds(features: any[]) {
+    //   const bounds = new maplibregl.LngLatBounds();
+    //   features.forEach((feature: any) => {
+    //     bounds.extend(feature.geometry.coordinates as any);
+    //   });
+    //   return bounds;
+    // }
 
     if (allAddress.length > 0) {
       const firstAddress = allAddress[0];
       const lngLat: [number, number] = firstAddress.geometry.coordinates as [number, number];
       map.setCenter(lngLat);
       map.setZoom(18);
-      map.fitBounds(getBounds(allAddress), {
-        padding: 50
-      });
+      // map.fitBounds(getBounds(allAddress), {
+      //   padding: 50
+      // });
       
       showLocationDetail(firstAddress);
     }

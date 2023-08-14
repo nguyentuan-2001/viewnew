@@ -5,7 +5,7 @@
             "type":"Feature",
             "geometry": {
                 "coordinates": [
-                    105.8423346755345, 21.006418139019843
+                    105.845023, 21.0048042
                 ],
                 "type": "Point"
               },
@@ -14,7 +14,7 @@
                 "height": 10,
                 "name":"Khoa Giáo dục Quốc phòng & An ninh",
                 "image_url_1": "../images/mark.png",
-                "image_url_2": "https://lh5.googleusercontent.com/p/AF1QipMyH3W5j2fPxGRdYbDgsJoH_vRmEAiiciHkWbMV=w408-h306-k-no",
+                "image_url_2": "https://lh5.googleusercontent.com/p/AF1QipNoXTPDaksqQHLgiFX7gE4HR-3DKSANLlyQFRLM=w408-h306-k-no",
                 "iconSize": [28, 35],
                 "desc": "Trường Điện – Điện tử là đơn vị cấp 2 thuộc ĐHBKHN và là đơn vị đào tạo và nghiên cứu nòng cốt trong lĩnh vực Điện – Điện tử, có tính tự chủ cao thuộc ĐHBKHN, có chức năng chính là đào tạo cấp bằng, NCKH và chuyển giao tri thức trong lĩnh vực chuyên môn Điện – Điện tử, kỹ thuật đa phương tiện.",
                 "type":"1",
@@ -37,7 +37,7 @@
                 "height": 10,
                 "name":"Khoa Giáo dục Thể chất",
                 "image_url_1": "../images/mark.png",
-                "image_url_2": "https://lh5.googleusercontent.com/p/AF1QipMyH3W5j2fPxGRdYbDgsJoH_vRmEAiiciHkWbMV=w408-h306-k-no",
+                "image_url_2": "https://images.foody.vn/res/g18/178406/prof/s/foody-mobile-ntd-jpg-412-635811045392085334.jpg",
                 "iconSize": [28, 35],
                 "desc": "Trường Điện – Điện tử là đơn vị cấp 2 thuộc ĐHBKHN và là đơn vị đào tạo và nghiên cứu nòng cốt trong lĩnh vực Điện – Điện tử, có tính tự chủ cao thuộc ĐHBKHN, có chức năng chính là đào tạo cấp bằng, NCKH và chuyển giao tri thức trong lĩnh vực chuyên môn Điện – Điện tử, kỹ thuật đa phương tiện.",
                 "type":"1",
@@ -60,7 +60,7 @@
                 "height": 10,
                 "name":"Khoa Lý luận Chính trị",
                 "image_url_1": "../images/mark.png",
-                "image_url_2": "https://lh5.googleusercontent.com/p/AF1QipMyH3W5j2fPxGRdYbDgsJoH_vRmEAiiciHkWbMV=w408-h306-k-no",
+                "image_url_2": "https://lh5.googleusercontent.com/p/AF1QipNoXTPDaksqQHLgiFX7gE4HR-3DKSANLlyQFRLM=w408-h306-k-no",
                 "iconSize": [28, 35],
                 "desc": "Trường Điện – Điện tử là đơn vị cấp 2 thuộc ĐHBKHN và là đơn vị đào tạo và nghiên cứu nòng cốt trong lĩnh vực Điện – Điện tử, có tính tự chủ cao thuộc ĐHBKHN, có chức năng chính là đào tạo cấp bằng, NCKH và chuyển giao tri thức trong lĩnh vực chuyên môn Điện – Điện tử, kỹ thuật đa phương tiện.",
                 "type":"1",
@@ -106,7 +106,7 @@
                 "height": 10,
                 "name":"Trường Công nghệ Thông tin và Truyền thông",
                 "image_url_1": "../images/mark.png",
-                "image_url_2": "https://lh5.googleusercontent.com/p/AF1QipMyH3W5j2fPxGRdYbDgsJoH_vRmEAiiciHkWbMV=w408-h306-k-no",
+                "image_url_2": "https://lh5.googleusercontent.com/p/AF1QipOid1et5udZcEDt2i9qvAD3MH9H-ue3bMBh2KA4=w411-h240-k-no",
                 "iconSize": [28, 35],
                 "desc": "Trường Điện – Điện tử là đơn vị cấp 2 thuộc ĐHBKHN và là đơn vị đào tạo và nghiên cứu nòng cốt trong lĩnh vực Điện – Điện tử, có tính tự chủ cao thuộc ĐHBKHN, có chức năng chính là đào tạo cấp bằng, NCKH và chuyển giao tri thức trong lĩnh vực chuyên môn Điện – Điện tử, kỹ thuật đa phương tiện.",
                 "type":"1",
@@ -198,7 +198,7 @@
                 "height": 10,
                 "name":"Viện Toán ứng dụng và Tin học",
                 "image_url_1": "../images/mark.png",
-                "image_url_2": "https://lh5.googleusercontent.com/p/AF1QipMyH3W5j2fPxGRdYbDgsJoH_vRmEAiiciHkWbMV=w408-h306-k-no",
+                "image_url_2": "https://lh5.googleusercontent.com/p/AF1QipNoXTPDaksqQHLgiFX7gE4HR-3DKSANLlyQFRLM=w408-h306-k-no",
                 "iconSize": [28, 35],
                 "desc": "Trường Điện – Điện tử là đơn vị cấp 2 thuộc ĐHBKHN và là đơn vị đào tạo và nghiên cứu nòng cốt trong lĩnh vực Điện – Điện tử, có tính tự chủ cao thuộc ĐHBKHN, có chức năng chính là đào tạo cấp bằng, NCKH và chuyển giao tri thức trong lĩnh vực chuyên môn Điện – Điện tử, kỹ thuật đa phương tiện.",
                 "type":"1",
@@ -281,7 +281,7 @@
             "type":"Feature",
             "geometry": {
                 "coordinates": [
-                    105.8423346755345, 21.006418139019843
+                    105.845205, 21.0044959
                 ],
                 "type": "Point"
               },
@@ -290,7 +290,7 @@
                 "height": 10,
                 "name":"Viện Sư phạm Kỹ thuật",
                 "image_url_1": "../images/mark.png",
-                "image_url_2": "https://lh5.googleusercontent.com/p/AF1QipMyH3W5j2fPxGRdYbDgsJoH_vRmEAiiciHkWbMV=w408-h306-k-no",
+                "image_url_2": "https://lh5.googleusercontent.com/p/AF1QipNUq6eTYKrTkKzKNS7vTZ5HPcpYl_sd7dypL2Fa=w408-h306-k-no",
                 "iconSize": [28, 35],
                 "desc": "Trường Điện – Điện tử là đơn vị cấp 2 thuộc ĐHBKHN và là đơn vị đào tạo và nghiên cứu nòng cốt trong lĩnh vực Điện – Điện tử, có tính tự chủ cao thuộc ĐHBKHN, có chức năng chính là đào tạo cấp bằng, NCKH và chuyển giao tri thức trong lĩnh vực chuyên môn Điện – Điện tử, kỹ thuật đa phương tiện.",
                 "type":"1",
@@ -316,7 +316,7 @@
                 "height": 10,
                 "name":"Viện Khoa học Công nghệ Quốc tế Việt Nam - Nhật Bản",
                 "image_url_1": "../images/mark.png",
-                "image_url_2": "https://lh5.googleusercontent.com/p/AF1QipMyH3W5j2fPxGRdYbDgsJoH_vRmEAiiciHkWbMV=w408-h306-k-no",
+                "image_url_2": "https://library.hust.edu.vn/sites/default/files/1308122022.jpg",
                 "iconSize": [28, 35],
                 "desc": "Trường Điện – Điện tử là đơn vị cấp 2 thuộc ĐHBKHN và là đơn vị đào tạo và nghiên cứu nòng cốt trong lĩnh vực Điện – Điện tử, có tính tự chủ cao thuộc ĐHBKHN, có chức năng chính là đào tạo cấp bằng, NCKH và chuyển giao tri thức trong lĩnh vực chuyên môn Điện – Điện tử, kỹ thuật đa phương tiện.",
                 "type":"2",
@@ -339,7 +339,7 @@
                 "height": 10,
                 "name":"Trung tâm công nghệ và kinh tế số",
                 "image_url_1": "../images/mark.png",
-                "image_url_2": "https://lh5.googleusercontent.com/p/AF1QipMyH3W5j2fPxGRdYbDgsJoH_vRmEAiiciHkWbMV=w408-h306-k-no",
+                "image_url_2": "https://library.hust.edu.vn/sites/default/files/1308122022.jpg",
                 "iconSize": [28, 35],
                 "desc": "Trường Điện – Điện tử là đơn vị cấp 2 thuộc ĐHBKHN và là đơn vị đào tạo và nghiên cứu nòng cốt trong lĩnh vực Điện – Điện tử, có tính tự chủ cao thuộc ĐHBKHN, có chức năng chính là đào tạo cấp bằng, NCKH và chuyển giao tri thức trong lĩnh vực chuyên môn Điện – Điện tử, kỹ thuật đa phương tiện.",
                 "type":"2",
@@ -477,7 +477,7 @@
                 "height": 10,
                 "name":"Viện Khoa học và Công nghệ Nhiệt-Lạnh",
                 "image_url_1": "../images/mark.png",
-                "image_url_2": "https://lh5.googleusercontent.com/p/AF1QipMyH3W5j2fPxGRdYbDgsJoH_vRmEAiiciHkWbMV=w408-h306-k-no",
+                "image_url_2": "https://library.hust.edu.vn/sites/default/files/1308122022.jpg",
                 "iconSize": [28, 35],
                 "desc": "Trường Điện – Điện tử là đơn vị cấp 2 thuộc ĐHBKHN và là đơn vị đào tạo và nghiên cứu nòng cốt trong lĩnh vực Điện – Điện tử, có tính tự chủ cao thuộc ĐHBKHN, có chức năng chính là đào tạo cấp bằng, NCKH và chuyển giao tri thức trong lĩnh vực chuyên môn Điện – Điện tử, kỹ thuật đa phương tiện.",
                 "type":"2",
@@ -618,7 +618,7 @@
                 "height": 10,
                 "name":"Phòng Tài chính - Kế toán",
                 "image_url_1": "../images/mark.png",
-                "image_url_2": "https://lh5.googleusercontent.com/p/AF1QipMyH3W5j2fPxGRdYbDgsJoH_vRmEAiiciHkWbMV=w408-h306-k-no",
+                "image_url_2": "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.6435-9/186264957_111221917818681_7934631979094961515_n.jpg?_nc_cat=103&cb=99be929b-59f725be&ccb=1-7&_nc_sid=300f58&_nc_ohc=KqsIABOqc-QAX9Cx4IL&_nc_ht=scontent.fhan2-4.fna&oh=00_AfColC67-X93KH4fIIdUFygOjHnTlSrNGCa2sA4QKGNGDw&oe=65011A80",
                 "iconSize": [28, 35],
                 "desc": "Trường Điện – Điện tử là đơn vị cấp 2 thuộc ĐHBKHN và là đơn vị đào tạo và nghiên cứu nòng cốt trong lĩnh vực Điện – Điện tử, có tính tự chủ cao thuộc ĐHBKHN, có chức năng chính là đào tạo cấp bằng, NCKH và chuyển giao tri thức trong lĩnh vực chuyên môn Điện – Điện tử, kỹ thuật đa phương tiện.",
                 "type":"3",
@@ -756,7 +756,7 @@
                 "height": 10,
                 "name":"Phòng Phát triển dự án đầu tư",
                 "image_url_1": "../images/mark.png",
-                "image_url_2": "https://lh5.googleusercontent.com/p/AF1QipMyH3W5j2fPxGRdYbDgsJoH_vRmEAiiciHkWbMV=w408-h306-k-no",
+                "image_url_2": "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.6435-9/186264957_111221917818681_7934631979094961515_n.jpg?_nc_cat=103&cb=99be929b-59f725be&ccb=1-7&_nc_sid=300f58&_nc_ohc=KqsIABOqc-QAX9Cx4IL&_nc_ht=scontent.fhan2-4.fna&oh=00_AfColC67-X93KH4fIIdUFygOjHnTlSrNGCa2sA4QKGNGDw&oe=65011A80",
                 "iconSize": [28, 35],
                 "desc": "Trường Điện – Điện tử là đơn vị cấp 2 thuộc ĐHBKHN và là đơn vị đào tạo và nghiên cứu nòng cốt trong lĩnh vực Điện – Điện tử, có tính tự chủ cao thuộc ĐHBKHN, có chức năng chính là đào tạo cấp bằng, NCKH và chuyển giao tri thức trong lĩnh vực chuyên môn Điện – Điện tử, kỹ thuật đa phương tiện.",
                 "type":"3",
@@ -779,7 +779,7 @@
                 "height": 10,
                 "name":"Thư viện Tạ Quang Bửu",
                 "image_url_1": "../images/mark.png",
-                "image_url_2": "https://lh5.googleusercontent.com/p/AF1QipMyH3W5j2fPxGRdYbDgsJoH_vRmEAiiciHkWbMV=w408-h306-k-no",
+                "image_url_2": "https://library.hust.edu.vn/sites/default/files/1308122022.jpg",
                 "iconSize": [28, 35],
                 "desc": "Trường Điện – Điện tử là đơn vị cấp 2 thuộc ĐHBKHN và là đơn vị đào tạo và nghiên cứu nòng cốt trong lĩnh vực Điện – Điện tử, có tính tự chủ cao thuộc ĐHBKHN, có chức năng chính là đào tạo cấp bằng, NCKH và chuyển giao tri thức trong lĩnh vực chuyên môn Điện – Điện tử, kỹ thuật đa phương tiện.",
                 "type":"3",
@@ -825,7 +825,7 @@
                 "height": 10,
                 "name":"Trung tâm Mạng thông tin",
                 "image_url_1": "../images/mark.png",
-                "image_url_2": "https://lh5.googleusercontent.com/p/AF1QipMyH3W5j2fPxGRdYbDgsJoH_vRmEAiiciHkWbMV=w408-h306-k-no",
+                "image_url_2": "https://library.hust.edu.vn/sites/default/files/1308122022.jpg",
                 "iconSize": [28, 35],
                 "desc": "Trường Điện – Điện tử là đơn vị cấp 2 thuộc ĐHBKHN và là đơn vị đào tạo và nghiên cứu nòng cốt trong lĩnh vực Điện – Điện tử, có tính tự chủ cao thuộc ĐHBKHN, có chức năng chính là đào tạo cấp bằng, NCKH và chuyển giao tri thức trong lĩnh vực chuyên môn Điện – Điện tử, kỹ thuật đa phương tiện.",
                 "type":"3",
@@ -848,7 +848,7 @@
                 "height": 10,
                 "name":"Phòng Truyền thông và Quản trị thương hiệu",
                 "image_url_1": "../images/mark.png",
-                "image_url_2": "https://lh5.googleusercontent.com/p/AF1QipMyH3W5j2fPxGRdYbDgsJoH_vRmEAiiciHkWbMV=w408-h306-k-no",
+                "image_url_2": "https://library.hust.edu.vn/sites/default/files/1308122022.jpg",
                 "iconSize": [28, 35],
                 "desc": "Trường Điện – Điện tử là đơn vị cấp 2 thuộc ĐHBKHN và là đơn vị đào tạo và nghiên cứu nòng cốt trong lĩnh vực Điện – Điện tử, có tính tự chủ cao thuộc ĐHBKHN, có chức năng chính là đào tạo cấp bằng, NCKH và chuyển giao tri thức trong lĩnh vực chuyên môn Điện – Điện tử, kỹ thuật đa phương tiện.",
                 "type":"3",
@@ -1095,7 +1095,7 @@
             "type":"Feature",
             "geometry": {
                 "coordinates": [
-                    
+                    105.8423346755345, 21.006418139019843
                 ],
                 "type": "Point"
               },

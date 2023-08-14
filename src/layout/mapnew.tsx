@@ -9,6 +9,7 @@ import { MapContext } from "../contexts/tabnamecontext";
 import { showLocationDetail } from "../map/showinformation";
 import nha from '../hust/nha.json';
 import border from '../hust/water_areas.json';
+import { searchAddress, updateSuggestions } from "../map/search";
 
 
 interface PropsMap {
@@ -69,7 +70,20 @@ const MapNew: React.FC<PropsMap> = ({
     overMap(map);
 
     map.on("load", () => {
-      
+      searchAddress(map);
+      const searchInput = document.getElementById("search__address") as HTMLInputElement;
+      if (searchInput) {
+        searchInput.addEventListener("input", () => {
+          const searchText = searchInput.value;
+          const suggestions = data.features.filter(function (feature) {
+            return feature.properties.name
+              .toLowerCase()
+              .includes(searchText.toLowerCase());
+          });
+          updateSuggestions(suggestions, map);
+        });
+      }
+
       if(isSwitchOn === false){
         setCurrentStyle(maptiler)
       }else{

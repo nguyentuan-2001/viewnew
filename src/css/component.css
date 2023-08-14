@@ -908,7 +908,7 @@ input:checked+.slider:before {
 }
 
 .language>div {
-  padding: 5px 15px;
+  padding: 2px 15px;
   border: 1px solid gray;
   border-radius: 8px;
   margin: 5px;
